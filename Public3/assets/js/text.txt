@@ -1,0 +1,19 @@
+function getDaysInMonth(month) {
+    var date_test = new Date(month, 2);
+    var days = [];
+    while (date_test.getMonth() === month) {
+      days.push(new Date(date_test).toJSON().slice(0,10));
+      date_test.setDate(date_test.getDate()+1);
+    }
+    lastDay = new Date(date_test.getFullYear(), date_test.getMonth()).toJSON().slice(0,10);
+    days.push(lastDay)
+    console.log(days)
+    return days;
+}
+
+
+
+var get_month = new Date(2022,m - 1);
+        firstDay = new Date(get_month.getFullYear(), get_month.getMonth(), 2).toJSON().slice(0,10);
+        lastDay = new Date(get_month.getFullYear(), get_month.getMonth() + 1).toJSON().slice(0,10);
+        dataCall()
